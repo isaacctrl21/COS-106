@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata & Character Encoding -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic Management and Task Planner for Isaac Adelagun - COS106 Introduction to Web Technologies at Miva Open University">
+  <meta name="author" content="Isaac Adelagun">
+  <title>Academic Planner | Isaac Adelagun - COS106</title>
+  
+  <!-- External Centralized CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- External Centralized JavaScript (Deferred) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="Home page">
+        <div class="brand-logo">IA</div>
+        <div class="brand-text">
+          <h1>Isaac Adelagun</h1>
+          <p>Cyber Security | Miva Open University</p>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Toggle Button -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        &#9776;
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link active">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER BANNER -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="badge badge-cyber">Interactive Academic Tool</span>
+      <h1>Academic Management &amp; Task Planner</h1>
+      <p>
+        Organize coursework, track project milestones, and manage upcoming university deadlines 
+        with automatic LocalStorage browser persistence.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+    <div class="container">
+      
+      <!-- PLANNER STATISTICS BAR -->
+      <section class="planner-stats" aria-label="Task Status Summary">
+        <div class="stat-box">
+          <span class="count" id="total-tasks-count">0</span>
+          <span class="desc">Total Tasks</span>
+        </div>
+        <div class="stat-box" style="border-top: 3px solid var(--warning);">
+          <span class="count" id="pending-tasks-count" style="color: #b45309;">0</span>
+          <span class="desc">Pending Tasks</span>
+        </div>
+        <div class="stat-box" style="border-top: 3px solid var(--success);">
+          <span class="count" id="completed-tasks-count" style="color: var(--success);">0</span>
+          <span class="desc">Completed Tasks</span>
+        </div>
+      </section>
+
+      <!-- PLANNER MAIN TWO-COLUMN WORKSPACE -->
+      <div class="planner-layout">
+        
+        <!-- COLUMN 1: ADD NEW TASK FORM -->
+        <section class="planner-form-card" aria-label="Add New Task Form">
+          <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Add Academic Task</h2>
+          <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 1.5rem;">
+            Enter assignment or study details to add them to your planner.
+          </p>
+
+          <form id="task-form">
+            <!-- Task Title -->
+            <div class="form-group">
+              <label for="task-title">Task Title / Description *</label>
+              <input 
+                type="text" 
+                id="task-title" 
+                class="form-control" 
+                placeholder="e.g., Complete COS106 HTML5 Practical" 
+                required
+              >
+            </div>
+
+            <!-- Course Code Selection -->
+            <div class="form-group">
+              <label for="task-course">Course Code *</label>
+              <select id="task-course" class="form-control" required>
+                <option value="" disabled selected>-- Select Course --</option>
+                <option value="COS106">COS106 - Introduction to Web Technologies</option>
+                <option value="CYB101">CYB101 - Fundamentals of Cyber Security</option>
+                <option value="COS101">COS101 - Introduction to Computer Science</option>
+                <option value="MTH101">MTH101 - Elementary Mathematics I</option>
+                <option value="GST101">GST101 - Use of English and Communication</option>
+                <option value="GST103">GST103 - Nigerian Peoples and Culture</option>
+                <option value="GENERAL">General Academic Study</option>
+              </select>
+            </div>
+
+            <!-- Due Date -->
+            <div class="form-group">
+              <label for="task-date">Due Date *</label>
+              <input type="date" id="task-date" class="form-control" required>
+            </div>
+
+            <!-- Priority Level -->
+            <div class="form-group">
+              <label for="task-priority">Priority Level</label>
+              <select id="task-priority" class="form-control">
+                <option value="Low">Low Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="High">High Priority</option>
+              </select>
+            </div>
+
+            <!-- Task Category -->
+            <div class="form-group">
+              <label for="task-category">Category</label>
+              <select id="task-category" class="form-control">
+                <option value="Assignment" selected>Assignment</option>
+                <option value="Lab Work">Lab Work</option>
+                <option value="Quiz">Continuous Assessment (Quiz)</option>
+                <option value="Study">Self Study &amp; Review</option>
+                <option value="Examination">Semester Examination</option>
+              </select>
+            </div>
+
+            <!-- Action Buttons -->
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              + Add Task to Planner
+            </button>
+            <button type="button" id="reset-tasks-btn" class="btn btn-outline-dark btn-sm" style="width: 100%; margin-top: 0.75rem;">
+              Reset to Sample Tasks
+            </button>
+          </form>
+        </section>
+
+        <!-- COLUMN 2: TASK LIST & MANAGEMENT VIEW -->
+        <section class="card" aria-label="Task Management List">
+          <div class="planner-toolbar">
+            <h2 style="font-size: 1.35rem; margin-bottom: 0;">Task Schedule</h2>
+            
+            <!-- Filter Tabs -->
+            <div class="task-filter-group" aria-label="Filter tasks">
+              <button class="task-filter-btn active" data-filter="all">All</button>
+              <button class="task-filter-btn" data-filter="pending">Pending</button>
+              <button class="task-filter-btn" data-filter="completed">Completed</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Tasks List Container -->
+          <ul class="task-list" id="task-list" aria-live="polite">
+            <!-- Injected dynamically by script.js -->
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- WEEKLY STUDY TIMETABLE SECTION -->
+      <section class="section">
+        <div class="section-title">
+          <h2>100 Level Cyber Security Study Schedule</h2>
+          <p>Organized weekly academic routine for Miva Open University online lectures and practical coding sessions.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time Slot</th>
+                <th>Course</th>
+                <th>Format</th>
+                <th>Weekly Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monday</strong></td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td><span class="tag-highlight">COS106</span></td>
+                <td>Virtual LMS</td>
+                <td>Web Technologies Lecture &amp; Semantic HTML Lab</td>
+              </tr>
+              <tr>
+                <td><strong>Tuesday</strong></td>
+                <td>02:00 PM - 04:00 PM</td>
+                <td><span class="tag-highlight">CYB101</span></td>
+                <td>Online Module</td>
+                <td>Fundamentals of Cyber Security &amp; CIA Triad Case Studies</td>
+              </tr>
+              <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>09:00 AM - 11:00 AM</td>
+                <td><span class="tag-highlight">COS101</span></td>
+                <td>Virtual Lecture</td>
+                <td>Introduction to Computer Science &amp; Algorithm Design</td>
+              </tr>
+              <tr>
+                <td><strong>Thursday</strong></td>
+                <td>01:00 PM - 03:00 PM</td>
+                <td><span class="tag-highlight">MTH101</span></td>
+                <td>Problem Session</td>
+                <td>Elementary Mathematics Tutorial &amp; Exercises</td>
+              </tr>
+              <tr>
+                <td><strong>Friday</strong></td>
+                <td>03:00 PM - 05:00 PM</td>
+                <td><span class="tag-highlight">COS106 / CYB</span></td>
+                <td>Self-Directed Lab</td>
+                <td>CSS Styling Practice, JavaScript Debugging, &amp; Task Organization</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Isaac Adelagun</h4>
+          <p>
+            100 Level Cyber Security Student at Miva Open University.<br>
+            Course: <strong>COS106 &bull; Introduction to Web Technologies</strong><br>
+            Matric: <code>2025/C/CYB/1147</code> &bull; Student ID: <code>301883230</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Project Showcase</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Institution</h4>
+          <p>
+            <strong>Miva Open University</strong><br>
+            School of Computing<br>
+            Email: <a href="mailto:i.adelagun3230@miva.edu.ng" style="color:var(--accent-cyan);">i.adelagun3230@miva.edu.ng</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2026</span> Isaac Adelagun. Built with pure HTML5, CSS3, and Vanilla JavaScript for COS106. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

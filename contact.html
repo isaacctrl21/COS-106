@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata & Character Encoding -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Isaac Adelagun - Cyber Security Undergraduate at Miva Open University for COS106 Web Technologies">
+  <meta name="author" content="Isaac Adelagun">
+  <title>Contact | Isaac Adelagun - COS106</title>
+  
+  <!-- External Centralized CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- External Centralized JavaScript (Deferred) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="Home page">
+        <div class="brand-logo">IA</div>
+        <div class="brand-text">
+          <h1>Isaac Adelagun</h1>
+          <p>Cyber Security | Miva Open University</p>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Toggle Button -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        &#9776;
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER BANNER -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="badge badge-cyber">Communication &amp; Inquiries</span>
+      <h1>Contact &amp; Academic Collaboration</h1>
+      <p>
+        Reach out to connect regarding COS106 coursework, study sessions, or cybersecurity discussions 
+        at Miva Open University.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- COLUMN 1: STUDENT DIRECT CONTACT INFORMATION -->
+        <aside class="contact-info-card" aria-label="Contact Information">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+            <img src="images/profile.jpeg" alt="Isaac Adelagun" class="student-avatar-inline" style="width: 65px; height: 65px;">
+            <div>
+              <h2 style="font-size: 1.25rem; margin-bottom: 0.2rem;">Academic Contact</h2>
+              <p class="text-muted" style="margin-bottom: 0; font-size: 0.85rem;">Isaac Adelagun &bull; Cyber Security</p>
+            </div>
+          </div>
+          <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1.75rem;">
+            Official communication channels for Isaac Adelagun at Miva Open University.
+          </p>
+
+          <!-- Contact Method 1: Email -->
+          <div class="contact-method">
+            <div class="contact-icon">&#9993;</div>
+            <div class="contact-method-text">
+              <h4>Institutional Email</h4>
+              <p>
+                <a href="mailto:i.adelagun3230@miva.edu.ng">i.adelagun3230@miva.edu.ng</a>
+              </p>
+              <small class="text-muted">Primary channel for coursework inquiries</small>
+            </div>
+          </div>
+
+          <!-- Contact Method 2: Institution & Campus -->
+          <div class="contact-method">
+            <div class="contact-icon">&#127979;</div>
+            <div class="contact-method-text">
+              <h4>Institution &amp; Faculty</h4>
+              <p>Miva Open University</p>
+              <small class="text-muted">School of Computing &bull; Cyber Security (100 Level)</small>
+            </div>
+          </div>
+
+          <!-- Contact Method 3: Student Identifiers -->
+          <div class="contact-method">
+            <div class="contact-icon">&#127380;</div>
+            <div class="contact-method-text">
+              <h4>Academic Credentials</h4>
+              <p style="margin-bottom: 0.2rem;">Matric: <code>2025/C/CYB/1147</code></p>
+              <p style="margin-bottom: 0;">Student ID: <code>301883230</code></p>
+            </div>
+          </div>
+
+          <!-- Contact Method 4: Study Hours -->
+          <div class="contact-method">
+            <div class="contact-icon">&#128340;</div>
+            <div class="contact-method-text">
+              <h4>Academic Office Hours</h4>
+              <p>Monday &ndash; Friday</p>
+              <small class="text-muted">10:00 AM &ndash; 4:00 PM (West Africa Time)</small>
+            </div>
+          </div>
+
+          <!-- Professional Links (Placeholders) -->
+          <div style="border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 1.5rem;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Professional Links (Placeholders)</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: var(--text-muted);">
+              <li style="margin-bottom: 0.4rem;">&bull; <a href="#github-placeholder" onclick="alert('GitHub link placeholder for student coursework repository.'); return false;">[Editable Placeholder: GitHub Profile Link]</a></li>
+              <li style="margin-bottom: 0.4rem;">&bull; <a href="#linkedin-placeholder" onclick="alert('LinkedIn profile placeholder for student professional networking.'); return false;">[Editable Placeholder: LinkedIn Profile Link]</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- COLUMN 2: INTERACTIVE CONTACT FORM -->
+        <section class="contact-form-card" aria-label="Send a Message Form">
+          <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Send an Academic Inquiry</h2>
+          <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1.5rem;">
+            Please complete the form below. Client-side JavaScript validation checks all fields before submission.
+          </p>
+
+          <!-- Feedback Banners -->
+          <div id="contact-success" class="alert alert-success" role="alert">
+            <strong>&#10004; Message Received!</strong> Thank you for reaching out. Your message has been validated and simulated successfully. Isaac Adelagun will respond via institutional email.
+          </div>
+
+          <div id="contact-error" class="alert alert-error" role="alert">
+            <strong>&#9888; Form Incomplete:</strong> Please correct the highlighted fields before submitting.
+          </div>
+
+          <form id="contact-form" novalidate>
+            <!-- Sender Full Name -->
+            <div class="form-group">
+              <label for="sender-name">Your Full Name *</label>
+              <input 
+                type="text" 
+                id="sender-name" 
+                class="form-control" 
+                placeholder="e.g., Alex Johnson" 
+                required
+              >
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Sender Email Address -->
+            <div class="form-group">
+              <label for="sender-email">Email Address *</label>
+              <input 
+                type="email" 
+                id="sender-email" 
+                class="form-control" 
+                placeholder="e.g., student@miva.edu.ng" 
+                required
+              >
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Subject Selection -->
+            <div class="form-group">
+              <label for="sender-subject">Subject Category *</label>
+              <select id="sender-subject" class="form-control" required>
+                <option value="" disabled selected>-- Select an Inquiry Topic --</option>
+                <option value="COS106 Inquiry">COS106 Web Technologies Collaboration</option>
+                <option value="Cyber Security Discussion">Cyber Security (CYB101) Study Group</option>
+                <option value="Coursework Feedback">Portfolio &amp; Project Feedback</option>
+                <option value="General Question">General Academic Question</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Message Textarea -->
+            <div class="form-group">
+              <label for="sender-message">Message *</label>
+              <textarea 
+                id="sender-message" 
+                class="form-control" 
+                rows="5" 
+                placeholder="Enter your message here (minimum 10 characters)..." 
+                required
+              ></textarea>
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Academic Message
+            </button>
+          </form>
+        </section>
+
+      </div>
+
+      <!-- ACADEMIC COLLABORATION POLICY -->
+      <section class="section" style="padding-top: 2rem;">
+        <div class="card" style="background-color: var(--bg-alt); border-left: 4px solid var(--accent);">
+          <h3>Miva Open University Academic Communication Policy</h3>
+          <p class="text-muted" style="margin-bottom: 0.5rem;">
+            In line with university distance learning ethics:
+          </p>
+          <ul style="color: var(--text-muted); font-size: 0.9rem;">
+            <li>All peer study inquiries should prioritize respectful, constructive discourse.</li>
+            <li>Responses to coursework questions are handled within 24 to 48 hours during official academic weeks.</li>
+            <li>Collaborative work must strictly conform to Miva Open University academic integrity and plagiarism guidelines.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Isaac Adelagun</h4>
+          <p>
+            100 Level Cyber Security Student at Miva Open University.<br>
+            Course: <strong>COS106 &bull; Introduction to Web Technologies</strong><br>
+            Matric: <code>2025/C/CYB/1147</code> &bull; Student ID: <code>301883230</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Project Showcase</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Institution</h4>
+          <p>
+            <strong>Miva Open University</strong><br>
+            School of Computing<br>
+            Email: <a href="mailto:i.adelagun3230@miva.edu.ng" style="color:var(--accent-cyan);">i.adelagun3230@miva.edu.ng</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2026</span> Isaac Adelagun. Built with pure HTML5, CSS3, and Vanilla JavaScript for COS106. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="16" fill="url(#cardGrad1)"/>
+  <!-- Browser Window Header -->
+  <rect x="25" y="25" width="350" height="190" rx="10" fill="#090d16" stroke="#334155" stroke-width="2"/>
+  <rect x="25" y="25" width="350" height="30" rx="10" fill="#1e293b"/>
+  <circle cx="45" cy="40" r="5" fill="#ef4444"/>
+  <circle cx="60" cy="40" r="5" fill="#f59e0b"/>
+  <circle cx="75" cy="40" r="5" fill="#10b981"/>
+  <rect x="100" y="33" width="180" height="14" rx="4" fill="#0f172a"/>
+  <text x="110" y="44" font-family="monospace" font-size="9" fill="#94a3b8">cos106-portfolio.miva.edu.ng</text>
+  <!-- Window Content -->
+  <rect x="45" y="75" width="120" height="15" rx="3" fill="#38bdf8"/>
+  <rect x="45" y="100" width="180" height="8" rx="2" fill="#64748b"/>
+  <rect x="45" y="115" width="150" height="8" rx="2" fill="#475569"/>
+  <!-- Code Block -->
+  <rect x="45" y="135" width="170" height="60" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="55" y="155" font-family="monospace" font-size="10" fill="#38bdf8">&lt;header class="hero"&gt;</text>
+  <text x="65" y="172" font-family="monospace" font-size="10" fill="#a7f3d0">&lt;h1&gt;Isaac Adelagun&lt;/h1&gt;</text>
+  <text x="55" y="188" font-family="monospace" font-size="10" fill="#38bdf8">&lt;/header&gt;</text>
+  <!-- Student Shield Icon on Right -->
+  <circle cx="300" cy="130" r="45" fill="#0284c7" opacity="0.2"/>
+  <circle cx="300" cy="130" r="35" fill="#0369a1"/>
+  <path d="M300 105 L320 115 V133 C320 145 300 155 300 155 C300 155 280 145 280 133 V115 Z" fill="#38bdf8"/>
+  <path d="M295 130 L300 135 L310 123" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+</svg>

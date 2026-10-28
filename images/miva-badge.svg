@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mivaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="30" fill="url(#mivaGrad)"/>
+  <circle cx="90" cy="90" r="70" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4,4"/>
+  <!-- Graduation Cap / Miva Emblem -->
+  <polygon points="90,48 140,70 90,92 40,70" fill="#38bdf8"/>
+  <polygon points="90,75 125,90 125,108 90,122 55,108 55,90" fill="#ffffff" opacity="0.9"/>
+  <!-- Tassel -->
+  <path d="M130 76 L130 110 L135 116" stroke="#facc15" stroke-width="3" fill="none"/>
+  <!-- Text -->
+  <text x="90" y="148" font-family="system-ui, sans-serif" font-weight="bold" font-size="16" fill="#f8fafc" text-anchor="middle" letter-spacing="2">MIVA</text>
+  <text x="90" y="165" font-family="system-ui, sans-serif" font-weight="600" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">OPEN UNIVERSITY</text>
+</svg>

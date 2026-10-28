@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata & Character Encoding -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects Showcase by Isaac Adelagun - COS106 Introduction to Web Technologies at Miva Open University">
+  <meta name="author" content="Isaac Adelagun">
+  <title>Projects Showcase | Isaac Adelagun - COS106</title>
+  
+  <!-- External Centralized CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- External Centralized JavaScript (Deferred) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="Home page">
+        <div class="brand-logo">IA</div>
+        <div class="brand-text">
+          <h1>Isaac Adelagun</h1>
+          <p>Cyber Security | Miva Open University</p>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Toggle Button -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        &#9776;
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER BANNER -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="badge badge-cyber">Coursework &amp; Practical Lab</span>
+      <h1>Projects Showcase</h1>
+      <p>
+        Explore my hands-on web development coursework and cybersecurity utility projects developed for 
+        <strong>COS106: Introduction to Web Technologies</strong> at <strong>Miva Open University</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+    <div class="container">
+      <!-- CATEGORY FILTER BUTTONS -->
+      <div class="filter-tabs" aria-label="Project Category Filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="cyber">Cyber Security</button>
+        <button class="filter-btn" data-filter="tools">Interactive Tools</button>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <section class="section" style="padding-top: 0;">
+        <div class="grid-2">
+          
+          <!-- PROJECT 1: COS106 Student Portfolio -->
+          <article class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="images/project-portfolio.svg" alt="Preview of COS106 Student Portfolio Website">
+            </div>
+            <div class="project-body">
+              <span class="project-category">Web Development &bull; Course Project</span>
+              <h3 class="project-title">COS106 Student Portfolio &amp; Academic Hub</h3>
+              <p class="project-description">
+                A multi-page responsive academic website built exclusively with vanilla HTML5, CSS3, and JavaScript. 
+                Features a centralized styling system, persistent academic task planner, contact form validation, 
+                and accessible semantic navigation designed for university evaluation.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Vanilla JavaScript</span>
+                <span class="project-tag">LocalStorage</span>
+              </div>
+              <div>
+                <a href="index.html" class="btn btn-outline-dark btn-sm">Explore Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Password Security Checker -->
+          <article class="project-card" data-category="cyber">
+            <div class="project-image">
+              <img src="images/project-password.svg" alt="Preview of Password Security & Complexity Checker">
+            </div>
+            <div class="project-body">
+              <span class="project-category">Cyber Security &bull; Interactive Lab</span>
+              <h3 class="project-title">Client-Side Password Security &amp; Entropy Checker</h3>
+              <p class="project-description">
+                A practical cybersecurity utility using JavaScript regular expressions to evaluate password strength. 
+                Checks for length, uppercase, lowercase, numbers, and symbols, warning users against dictionary words 
+                and vulnerable credential patterns.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Regex</span>
+                <span class="project-tag">Authentication</span>
+                <span class="project-tag">Cyber Hygiene</span>
+              </div>
+              <div>
+                <a href="#demo-modal" class="btn btn-outline-dark btn-sm" onclick="alert('Password Checker Prototype is integrated into COS106 Cyber Security Practical Lab coursework.'); return false;">View Lab Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Phishing Detection & Awareness Guide -->
+          <article class="project-card" data-category="cyber">
+            <div class="project-image">
+              <img src="images/project-phishing.svg" alt="Preview of Phishing Threat Awareness Guide">
+            </div>
+            <div class="project-body">
+              <span class="project-category">Cyber Security &bull; Educational Guide</span>
+              <h3 class="project-title">Phishing Awareness &amp; Malicious URL Detection Portal</h3>
+              <p class="project-description">
+                An educational web portal educating students on how to recognize phishing vectors, deceptive domain 
+                spoofing, homoglyph attacks, and malicious attachments, reinforcing institutional cybersecurity awareness 
+                at Miva Open University.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Threat Intelligence</span>
+                <span class="project-tag">Social Engineering</span>
+              </div>
+              <div>
+                <a href="#demo-modal" class="btn btn-outline-dark btn-sm" onclick="alert('Phishing Awareness Portal was researched as part of CYB101 & COS106 coursework.'); return false;">View Project Summary</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Academic Task Planner Engine -->
+          <article class="project-card" data-category="tools">
+            <div class="project-image">
+              <img src="images/project-planner.svg" alt="Preview of Academic Task Planner Component">
+            </div>
+            <div class="project-body">
+              <span class="project-category">Interactive Tools &bull; Productivity</span>
+              <h3 class="project-title">Dynamic Academic Task &amp; Deadline Organizer</h3>
+              <p class="project-description">
+                An interactive task management web application integrated directly into this portfolio. 
+                Allows students to schedule university assignments, assign priority levels, filter active tasks, 
+                and store items locally using the browser's LocalStorage API.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">LocalStorage</span>
+                <span class="project-tag">CRUD</span>
+                <span class="project-tag">DOM Manipulation</span>
+              </div>
+              <div>
+                <a href="planner.html" class="btn btn-primary btn-sm">Launch Planner &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- HTML5 MULTIMEDIA INTEGRATION SHOWCASE -->
+      <section class="section section-alt" style="border-radius: var(--radius-md); padding: 2.5rem; margin-bottom: 2.5rem;">
+        <div class="section-title">
+          <h2>Multimedia Demonstration (HTML5 Video &amp; Graphics)</h2>
+          <p>
+            Demonstrating foundational HTML5 multimedia capabilities as taught in COS106 Web Technologies.
+          </p>
+        </div>
+
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <h3>HTML5 Native Video Player</h3>
+            <p>
+              The HTML5 <code>&lt;video&gt;</code> element enables direct media playback in modern web browsers without 
+              external plugins. The player below demonstrates native browser playback controls, responsive container sizing, 
+              and custom poster graphics.
+            </p>
+            <p class="text-muted" style="font-size: 0.875rem;">
+              <em>
+                Note: Video files are located in the <code>videos/</code> directory. If an MP4 demo file is placed inside 
+                <code>videos/sample-demo.mp4</code>, it will stream directly in this player.
+              </em>
+            </p>
+          </div>
+
+          <!-- Video Player Container -->
+          <div class="card" style="padding: 1rem; background-color: #0f172a;">
+            <video controls width="100%" poster="images/project-portfolio.svg" style="border-radius: var(--radius-sm); max-height: 250px;">
+              <source src="videos/sample-demo.mp4" type="video/mp4">
+              Your browser does not support the HTML5 video element.
+            </video>
+            <p style="color: #94a3b8; font-size: 0.75rem; text-align: center; margin-top: 0.5rem; margin-bottom: 0;">
+              Figure 1: HTML5 Video Component with fallback controls (COS106 Demonstration)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITABLE PLACEHOLDER FOR FUTURE PROJECTS -->
+      <section class="section" style="padding-top: 0;">
+        <div class="card" style="background-color: #f8fafc; border-left: 4px solid var(--accent);">
+          <h3>Future Projects (Placeholder)</h3>
+          <p class="text-muted">
+            As I advance in my Cyber Security degree at Miva Open University, upcoming practical projects will be documented here:
+          </p>
+          <ul style="color: var(--text-muted); font-size: 0.9rem;">
+            <li>[Editable Placeholder: Network Packet Analyzer Web Interface]</li>
+            <li>[Editable Placeholder: Cryptographic Hash Generator & Verifier]</li>
+            <li>[Editable Placeholder: Web Vulnerability Scanner & Report Dashboard]</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Isaac Adelagun</h4>
+          <p>
+            100 Level Cyber Security Student at Miva Open University.<br>
+            Course: <strong>COS106 &bull; Introduction to Web Technologies</strong><br>
+            Matric: <code>2025/C/CYB/1147</code> &bull; Student ID: <code>301883230</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Project Showcase</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Institution</h4>
+          <p>
+            <strong>Miva Open University</strong><br>
+            School of Computing<br>
+            Email: <a href="mailto:i.adelagun3230@miva.edu.ng" style="color:var(--accent-cyan);">i.adelagun3230@miva.edu.ng</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2026</span> Isaac Adelagun. Built with pure HTML5, CSS3, and Vanilla JavaScript for COS106. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
